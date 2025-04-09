@@ -19,3 +19,10 @@ yarn install
 ```bash
 yarn docs:dev
 ```
+
+### Build and preview the docs
+
+```bash
+yarn docs:build
+yarn docs:preview
+```

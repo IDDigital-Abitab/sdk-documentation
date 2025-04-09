@@ -3,23 +3,17 @@
 layout: home
 
 hero:
-  name: "ID Digital SDK"
-  text: "This docs describe how to integrate Abitab ID Digital SDK into your app"
-  tagline: My great project tagline
-  actions:
-    - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
+  name: "Identidad Digital Abitab SDK"
+  tagline: "Integre su aplicación con nuestros SDK"
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Android
+    details: Integración basada en Android
+    link: /tech-stack/android
+  # - title: iOS
+  #   details: Integración basada en iOS
+  #   link: /ios
+  # - title: React Native
+  #   details: Integración basada en React Native
+  #   link: /react-native
 ---
-

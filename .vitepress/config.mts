@@ -2,28 +2,56 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "ID Digital SDK",
-  description: "This docs describe how to integrate Abitab ID Digital SDK into your app",
+  title: "Identidad Digital Abitab",
+  description: "Documentación de integración para nuestro SDK",
   srcDir: 'docs',
+  head: [['link', { rel: 'icon', href: '/logo-favicon.png' }]],
+  cleanUrls: true,
+  markdown: {
+
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    logo: '/logo-favicon.png',
+    footer: {
+      copyright: 'Copyright © 2025 Abitab S.A.',
+      message: 'Identidad Digital Abitab es una herramienta desarrollada por ID Digital Abitab.'
+    },
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: 'Documentación', link: '/first-steps' },
     ],
-
     sidebar: [
       {
-        text: 'Examples',
+        text: 'Primeros pasos',
+        link: '/first-steps',
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: 'Flujo de asociación', link: '/flows/asociation-flow' },
+          { text: 'Flujo de autenticación', link: '/flows/authentication-flow' },
         ]
-      }
+      },
+      {
+        text: 'Android',
+        link: '/tech-stack/android'
+      },
+      // {
+      //   text: 'iOS',
+      //   items: [
+      //     { text: 'Markdown Examples', link: '/markdown-examples' },
+      //   ]
+      // },
+      // {
+      //   text: 'React Native',
+      //   items: [
+      //     { text: 'Markdown Examples', link: '/markdown-examples' },
+      //     { text: 'Runtime API Examples', link: '/api-examples' }
+      //   ]
+      // },
     ],
-
+    // TODO: Add link to library distribution site
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/vuejs/vitepress', ariaLabel: 'Link de distribucion de Android' },
+      // { icon: 'github', link: 'https://github.com/vuejs/vitepress', ariaLabel: 'Link de distribucion de iOS' },
+      // { icon: 'github', link: 'https://github.com/vuejs/vitepress', ariaLabel: 'Link de distribucion de React Native' },
     ]
   }
 })

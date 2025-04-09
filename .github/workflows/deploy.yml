@@ -6,12 +6,12 @@ on:
       - main
 
 jobs:
-  preprod-deploy:
+  prod-deploy:
     name: Deploy Documentation
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: /
+        working-directory: .
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js
@@ -21,7 +21,7 @@ jobs:
       - name: Cache Node.js modules
         uses: actions/cache@v4
         with:
-          path: /node_modules
+          path: node_modules
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-node20-
