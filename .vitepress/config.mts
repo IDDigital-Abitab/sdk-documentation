@@ -30,22 +30,13 @@ export default defineConfig({
         ]
       },
       {
-        text: 'Android',
-        link: '/tech-stack/android'
+        text: 'Plataformas',
+        items: [
+          { text: 'Android', link: '/tech-stack/android' },
+          // { text: 'iOS', link: '/flows/authentication-flow' },
+          // { text: 'React Native', link: '/flows/authentication-flow' },
+        ]
       },
-      // {
-      //   text: 'iOS',
-      //   items: [
-      //     { text: 'Markdown Examples', link: '/markdown-examples' },
-      //   ]
-      // },
-      // {
-      //   text: 'React Native',
-      //   items: [
-      //     { text: 'Markdown Examples', link: '/markdown-examples' },
-      //     { text: 'Runtime API Examples', link: '/api-examples' }
-      //   ]
-      // },
     ],
     // TODO: Add link to library distribution site
     socialLinks: [

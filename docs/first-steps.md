@@ -22,9 +22,7 @@ Una vez asociado el dispositivo, puedes pedirle al usuario que autentique su ide
 
 ## 5. Obtención de datos del usuario
 
-<!-- TODO: No se si esto se puede usar -->
-
-Una vez que el usuario haya autorizado tu aplicación, podrás obtener información sobre él. Para ello, deberás realizar una solicitud a la API de _Identidad Digital Abitab_, tal como se describe en la sección [**Obtención de datos del usuario**](api/get-user-information).
+Una vez que el usuario haya asociado tu aplicación con su _Identidad Digital Abitab_, podrás obtener información sobre él. Para ello, deberás utilizar nuestro SDK y sus operaciones disponibles, podras obtener mas información en el apartado de la tecnologia que quieras implementar.
 
 ---
 
