@@ -1,15 +1,21 @@
 import { defineConfig } from 'vitepress'
+import {withMermaid} from 'vitepress-plugin-mermaid';
 
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
+export default withMermaid({
   title: "Identidad Digital Abitab",
   description: "Documentación de integración para nuestro SDK",
   srcDir: 'docs',
   head: [['link', { rel: 'icon', href: '/logo-favicon.png' }]],
   cleanUrls: true,
-  markdown: {
-
-  },
+  // markdown: {
+  //   config: (md) => {
+  //     configureDiagramsPlugin(md, {
+  //       diagramsDir: "docs/public/diagrams", // Optional: custom directory for SVG files
+  //       publicPath: "/diagrams", // Optional: custom public path for images
+  //     });
+  //   },
+  // },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: '/logo-favicon.png',
@@ -46,3 +52,4 @@ export default defineConfig({
     ]
   }
 })
+
