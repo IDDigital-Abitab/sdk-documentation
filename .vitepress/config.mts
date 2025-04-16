@@ -8,14 +8,6 @@ export default withMermaid({
   srcDir: 'docs',
   head: [['link', { rel: 'icon', href: '/logo-favicon.png' }]],
   cleanUrls: true,
-  // markdown: {
-  //   config: (md) => {
-  //     configureDiagramsPlugin(md, {
-  //       diagramsDir: "docs/public/diagrams", // Optional: custom directory for SVG files
-  //       publicPath: "/diagrams", // Optional: custom public path for images
-  //     });
-  //   },
-  // },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: '/logo-favicon.png',
@@ -44,11 +36,12 @@ export default withMermaid({
         ]
       },
     ],
-    // TODO: Add link to library distribution site
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress', ariaLabel: 'Link de distribucion de Android' },
-      // { icon: 'github', link: 'https://github.com/vuejs/vitepress', ariaLabel: 'Link de distribucion de iOS' },
-      // { icon: 'github', link: 'https://github.com/vuejs/vitepress', ariaLabel: 'Link de distribucion de React Native' },
+      // TODO: Publish this social links once the repo is public
+      // { icon: 'github', link: 'https://github.com/IDDigital-Abitab/id-digital-android-sdk', ariaLabel: 'Link al codigo fuente' },
+      // { icon: 'jitpack', link: 'https://jitpack.io/#IDDigital-Abitab/id-digital-android-sdk', ariaLabel: 'Link de distribución de Android' },
+      // { icon: 'iOS', link: 'https://github.com/vuejs/vitepress', ariaLabel: 'Link de distribución de iOS' },
+      // { icon: 'React Native', link: 'https://github.com/vuejs/vitepress', ariaLabel: 'Link de distribución de React Native' },
     ]
   }
 })

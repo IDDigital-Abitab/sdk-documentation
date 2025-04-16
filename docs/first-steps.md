@@ -1,6 +1,6 @@
 # Primeros pasos
 
-A continuación, te proporcionamos las instrucciones para llevar a cabo la integración _Identidad Digital Abitab SDK_ de manera exitosa:
+A continuación, te proporcionamos las instrucciones para llevar a cabo la integración _Identidad Digital Abitab SDK_ de manera éxitosa:
 
 ## 1. Obtención de credenciales
 
