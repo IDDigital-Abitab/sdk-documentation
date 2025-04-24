@@ -1,6 +1,12 @@
-import { defineConfig } from 'vitepress'
 import {withMermaid} from 'vitepress-plugin-mermaid';
+import { useSidebar } from 'vitepress-openapi'
+import spec from '../src/openapi.json' with { type: 'json' }
 
+const apiSidebar = useSidebar({
+    spec,
+    // Optionally, you can specify a link prefix for all generated sidebar items. Default is `/operations/`.
+    linkPrefix: '/operations/',
+})
 // https://vitepress.dev/reference/site-config
 export default withMermaid({
   title: "Identidad Digital Abitab",
@@ -35,6 +41,7 @@ export default withMermaid({
           // { text: 'React Native', link: '/flows/authentication-flow' },
         ]
       },
+      ...apiSidebar.generateSidebarGroups({ linkPrefix: '/operations/'})
     ],
     socialLinks: [
       // TODO: Publish this social links once the repo is public
