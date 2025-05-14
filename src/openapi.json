@@ -1,0 +1,116 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Identidad Digital Abitab SDK API",
+    "description": "API para completar la funcionalidad del SDK",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://auth.identificaciondigital.com.uy/api/"
+    }
+  ],
+  "tags": [
+    {
+      "name": "API",
+      "description": "Endpoints de la API"
+    }
+  ],
+  "paths": {
+    "/v2/sdk/get-challenge-result/": {
+      "get": {
+        "tags": [
+          "API"
+        ],
+        "summary": "Get challenge result",
+        "description": "Endpoint para obtener el resultado de una prueba de autenticación",
+        "security": [
+          {
+            "SDK API KEY": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "Identificador de la prueba de autenticación.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "SDK API KEY": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      }
+    },
+    "responses": {
+      "BadRequest": {
+        "description": "Bad Request",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "Forbidden": {
+        "description": "Forbidden",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "NotFound": {
+        "description": "NotFound",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      }
+    },
+    "schemas": {
+      "Result": {
+        "type": "object",
+        "required": [
+          "result"
+        ],
+        "properties": {
+          "result": {
+            "type": "string"
+          }
+        }
+      },
+      "Error": {
+        "type": "object",
+        "description": "RFC 7807 (https://datatracker.ietf.org/doc/html/rfc7807)"
+      }
+    }
+  }
+}
