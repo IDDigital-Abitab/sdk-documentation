@@ -1,6 +1,6 @@
-# Android
+# Utilización del sdk
 
-En esta página aprenderas a integrar el SDK de _Identidad Digital Abitab_ a tu app de **Android**, y podras completar los flujos de autenticación que creas necesarios.
+En esta página aprenderas a integrar el SDK de _Identidad Digital Abitab_ a tu app movil, y podras completar los flujos de autenticación que creas necesarios.
 
 ::: warning IMPORTANTE
 Si todavía no recibiste tus credenciales para poder integrarte, comunicate con un administrador
@@ -12,8 +12,9 @@ Si todavía no recibiste tus credenciales para poder integrarte, comunicate con 
 Instalacion
 ```
 ### Inicialización
-En tu archivo `MainActivity.kt` deberas inicializar nuesto SDK:
-```kt{1}
+En el punto de entrada de tu aplicación deberas inicializar nuesto SDK:
+::: code-group
+```kt [Android] {1}
 // MainActivity.kt
 
 import uy.com.abitab.iddigitalsdk.IDDigitalSDK
@@ -30,16 +31,26 @@ class MainActivity : ComponentActivity() {
     }
 }
 ```
+<!-- ```swift [iOS] {1}
+```
+```ts [React Native] {1}
+``` -->
+:::
 
 ## Funcionalidades disponibles
 ### Flujo de asociación
-```kt
-Flujo de asociacion
-```
-### Flujo de autenticación
-Dividiremos el bloque de código por método de validación
 ::: code-group
-```kt [Liveness]
+```kt [Android]
+```
+<!-- ```swift [iOS]
+```
+```ts [React Native]
+``` -->
+:::
+### Flujo de autenticación
+1. Liveness
+::: code-group
+```kt [Android]
 val document = Document(
     number = "45743055"
 )
@@ -49,7 +60,14 @@ sdkInstance.startLiveness(document, onError = { error ->
     // Verificar el resultado de la prueba de autenticación
 })
 ```
-```kt [Pin]
+<!-- ```swift [iOS]
+```
+```ts [React Native]
+``` -->
+:::
+2. Pin
+::: code-group
+```kt [Android]
 val document = Document(
     number = "45743055"
 )
@@ -59,6 +77,10 @@ sdkInstance.requestPin(document, onError = { error ->
     // Verificar el resultado de la prueba de autenticación
 })
 ```
+<!-- ```swift [iOS]
+```
+```ts [React Native]
+``` -->
 :::
 <!-- ### Solicitar información del usuario
 Una vez que el usuario haya asociado su identidad a tu aplicación, podras utilizar este método para obtener la información del usuario.
@@ -66,6 +88,3 @@ Una vez que el usuario haya asociado su identidad a tu aplicación, podras utili
 // MainActivity.kt
 
 ``` -->
-
-<!-- ### Aplicación de prueba
-Puedes referir a la [siguiente aplicación]() para ver una prueba de como usar el sdk -->

@@ -2,6 +2,9 @@
 
 En el flujo de asociación, el cliente (tu aplicación) solicita al usuario que se autentique en _Identidad Digital Abitab_ para asociar tu aplicación con su identidad. Este flujo es obligatorio antes de poder solicitarle al usuario procesos de autenticación a demanda.
 
+Para asociar el dispositivo hacemos uso del fingerprint del dispositivo del usuario. Esto hace que la relacion entre tu aplicación, el usuario e _Identidad Digital Abitab_.
+<!-- TODO: Agregar diagrama, documentacion o explicación del fingerprint del dispositivo -->
+
 ```mermaid
 sequenceDiagram
   autonumber
@@ -23,9 +26,9 @@ sequenceDiagram
 
   SDK->>S: Completar asociación
   S-->>SDK: Token de asociación
-  SDK-->>C: Ejecución del callback "onComplete" con usuario asociado al cliente
+  SDK-->>C: Usuario asociado al cliente
 ```
-<!-- TODO: Verificar si el cliente pide el numero de documento o si hacemos algo como la pagina intermedia donde lo solicitamos nosotros -->
+
 ## 1. Solicitar asociación
 Deberas asociar al usuario a tu aplicación cuando sea necesario, por ejemplo cuando el usuario haga click en el botón de "Iniciar Sesión". Para hacer esto, ejecuta nuestra función de _Asociación de dispositivo_. Asegúrate de incluir los siguientes parámetros en la ejecución:
 - `document`: El documento del usuario, compuesto por:
@@ -37,17 +40,6 @@ Deberas asociar al usuario a tu aplicación cuando sea necesario, por ejemplo cu
 - `onError`: Función que será ejecutada si el flujo no es completado con éxito.
 <!-- TODO: Esto va? -->
 - `context`: Contexto de tu aplicación para poder interactuar con el usuario.
-
-<!-- TODO: Incluir codeblocks con la ejecución de associateDevice() -->
-<!-- Ejemplo de la ejecución:
-::: code-group
-```kotlin
-```
-```swift
-```
-```typescript
-```
-::: -->
 
 ## 2. Manejar la respuesta de la asociación
 Después de que el usuario asocie su identidad, Identidad Digital Abitab SDK lo redirigirá de vuelta a tu aplicación haciendo uso de la ejecución de la funcion `onComplete` creada por ti. Si esta función es ejecutada quiere decir que el usuario pudo identificarse correctamente en nuestro sistema y tu aplicación esta asociada a su identidad.

@@ -7,9 +7,15 @@ hero:
   tagline: "Integre su aplicación con nuestros SDK"
 
 features:
-  - title: Android
-    details: Integración basada en Android
-    link: /tech-stack/android
+  - title: Implementación
+    details: Integración del SDK
+    link: /tech-stack/sdk
+  - title: Utilidades
+    details: Utilidades del SDK
+    link: /tech-stack/utils
+  # - title: Android
+  #   details: Integración basada en Android
+  #   link: /tech-stack/android
   # - title: iOS
   #   details: Integración basada en iOS
   #   link: /ios

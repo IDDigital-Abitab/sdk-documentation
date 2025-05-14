@@ -34,9 +34,11 @@ export default withMermaid({
         ]
       },
       {
-        text: 'Plataformas',
+        text: 'Implementación',
         items: [
-          { text: 'Android', link: '/tech-stack/android' },
+          { text: 'SDK', link: '/tech-stack/sdk' },
+          { text: 'Utilidades', link: '/tech-stack/utils' },
+          // { text: 'Android', link: '/tech-stack/android' },
           // { text: 'iOS', link: '/flows/authentication-flow' },
           // { text: 'React Native', link: '/flows/authentication-flow' },
         ]
