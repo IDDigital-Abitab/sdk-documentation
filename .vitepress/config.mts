@@ -5,6 +5,8 @@ export default {
   srcDir: "docs",
   head: [["link", { rel: "icon", href: "/logo-favicon.png" }]],
   cleanUrls: true,
+  lang: "es",
+  base: "/sdk-documentation/",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: "/logo-favicon.png",
