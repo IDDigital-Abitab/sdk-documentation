@@ -17,12 +17,12 @@ yarn install
 ### Run the docs
 
 ```bash
-yarn docs:dev
+yarn dev
 ```
 
 ### Build and preview the docs
 
 ```bash
-yarn docs:build
-yarn docs:preview
+yarn build
+yarn preview
 ```
