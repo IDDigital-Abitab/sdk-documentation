@@ -78,3 +78,21 @@ Para eliminar una asociación existente:
 ```kotlin
 sdkInstance.removeAssociation()
 ```
+
+## Crear sesión de validación
+
+Una vez asociado al usuario, es posible crear una sesión de validación.
+La misma puede ser de tipo `ChallengeType.Pin` o `ChallengeType.Liveness`
+
+```kotlin
+import uy.com.abitab.iddigitalsdk.domain.models.ChallengeType
+
+// ...
+
+sdkInstance.createValidationSession(
+  context = context,
+  type = ChallengeType.Pin,
+  onError = {},
+  onCompleted = {},
+)
+```
