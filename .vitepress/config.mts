@@ -1,7 +1,7 @@
 // https://vitepress.dev/reference/site-config
 export default {
   title: "Identidad Digital Abitab",
-  description: "Documentación de integración para nuestro SDK",
+  description: "Documentación de ID Digital SDK",
   srcDir: "docs",
   head: [["link", { rel: "icon", href: "/logo-favicon.png" }]],
   cleanUrls: true,
