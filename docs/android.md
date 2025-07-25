@@ -21,14 +21,21 @@ dependencyResolutionManagement {
 En tu archivo `build.gradle.kts` agregar esto:
 
 ```kts
+compileOptions {
+  isCoreLibraryDesugaringEnabled = true
+  sourceCompatibility = JavaVersion.VERSION_17
+  targetCompatibility = JavaVersion.VERSION_17
+}
+
 dependencies {
-	implementation("com.github.IDDigital-Abitab:id-digital-android-sdk:$latestAndroidSdkVersion")
+  coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.5")
+  implementation("com.github.IDDigital-Abitab:id-digital-android-sdk:$latestAndroidSdkVersion")
 }
 ```
 
 ## Inicializar SDK
 
-Para poder utilizar el SDK tienes que inicializarlo una única vez. Para ello deber proporcionar una `apiKey` válida.
+Para poder utilizar el SDK tienes que inicializarlo por única vez. Para ello deber proporcionar una `apiKey` válida.
 
 ```kotlin
 import uy.com.abitab.iddigitalsdk.IDDigitalSDK
@@ -50,6 +57,10 @@ class MainActivity : ComponentActivity() {
 Para poder comenzar a solicitar validaciones de un usuario, primero deberás tenerlo asociado a tu aplicación utilizando el método `associate`.
 
 ```kotlin
+import uy.com.abitab.iddigitalsdk.domain.models.Document
+
+// ...
+
 sdkInstance.associate(
   context = context,
   document = Document(number = documentNumber),
