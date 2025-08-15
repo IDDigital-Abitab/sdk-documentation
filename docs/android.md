@@ -47,7 +47,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         val apiKey = "JOwfMLO6..." // Debe estar guardada en un lugar seguro
-        sdkInstance = IDDigitalSDK.initialize(this, apiKey)
+        sdkInstance = IDDigitalSDK.initialize(this, apiKey, onError = {}, onCompleted = {})
     }
 }
 ```
