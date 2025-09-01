@@ -1,4 +1,4 @@
-# iOS <Badge type="info" text="0.1.0"/> <Badge type="danger" text="ALPHA" />
+# iOS <Badge type="info" text="0.2.0"/> <Badge type="danger" text="BETA" />
 
 La versión mínima soportada es iOS 15
 
