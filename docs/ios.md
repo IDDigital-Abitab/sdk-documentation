@@ -4,8 +4,12 @@ La versión mínima soportada es iOS 15
 
 ## Agregar la dependencia
 
-> [!WARNING]  
-> Esta sección está en desarrollo.
+Desde Xcode acceder a "File" -> "Add Package Dependencies".<br />
+Allí agregar la URL del SDK `https://github.com/IDDigital-Abitab/id-digital-ios-sdk` y hacer click en "Add Package".
+Una vez finalizado este proceso (puede tomar unos minutos), la librería estará lista para ser utilizada en tu proyecto.
+
+<img src="/public/ios-add-dependency-1.jpeg" />
+<img src="/public/ios-add-dependency-2.png" />
 
 ## Agregar descripciones de uso de permisos
 

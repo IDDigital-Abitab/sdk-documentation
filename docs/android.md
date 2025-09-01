@@ -29,7 +29,7 @@ compileOptions {
 
 dependencies {
   coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.5")
-  implementation("com.github.IDDigital-Abitab:id-digital-android-sdk:$latestAndroidSdkVersion")
+  implementation("com.github.IDDigital-Abitab:id-digital-android-sdk:0.2.0")
 }
 ```
 
